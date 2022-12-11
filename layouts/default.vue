@@ -1,21 +1,12 @@
 <template>
-  <div>
-    <VApp>
-      <v-btn @click="toggleTheme">toggle theme</v-btn>
-      <VMain>
+  <v-app>
+    <Header />
+    <v-main>
+      <v-container>
         <slot />
-      </VMain>
-    </VApp>
-  </div>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
-<script setup>
-import { useTheme } from "vuetify";
-const theme = useTheme();
-
-function toggleTheme() {
-  return (theme.global.name.value = theme.global.current.value.dark
-    ? "light"
-    : "dark");
-}
-</script>
+<script setup></script>

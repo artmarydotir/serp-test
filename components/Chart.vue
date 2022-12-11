@@ -2,20 +2,21 @@
   <div>
     <client-only>
       <v-chart
+        ref="chart"
         class="chart"
         :option="option"
-        ref="chart"
         :autoresize="true"
-        :loading="false"
+        :loading="loading"
       />
     </client-only>
   </div>
 </template>
 
 <script>
-import { use } from "echarts/core";
-import { SVGRenderer } from "echarts/renderers";
-import { PieChart, BarChart, LineChart } from "echarts/charts";
+import { use } from 'echarts/core';
+import { CanvasRenderer, SVGRenderer } from 'echarts/renderers';
+import { PieChart, BarChart, LineChart, GraphChart } from 'echarts/charts';
+
 import {
   TitleComponent,
   TooltipComponent,
@@ -23,9 +24,9 @@ import {
   GridComponent,
   GridSimpleComponent,
   DataZoomComponent,
-} from "echarts/components";
-import VChart, { THEME_KEY } from "vue-echarts";
-import { ref, defineComponent } from "vue";
+} from 'echarts/components';
+
+import VChart, { THEME_KEY } from 'vue-echarts';
 
 use([
   SVGRenderer,
@@ -34,6 +35,7 @@ use([
   PieChart,
   BarChart,
   LineChart,
+  GraphChart,
   TitleComponent,
   TooltipComponent,
   LegendComponent,
@@ -41,17 +43,21 @@ use([
 ]);
 
 export default defineComponent({
-  name: "HelloWorld",
+  name: 'HelloWorld',
   components: {
     VChart,
   },
   provide: {
-    [THEME_KEY]: "dark",
+    [THEME_KEY]: 'dark',
   },
   props: {
     option: {
       type: Object,
       default: () => ({}),
+    },
+    loading: {
+      type: Boolean,
+      default: false,
     },
   },
   //   setup() {
@@ -97,8 +103,11 @@ export default defineComponent({
   //   },
 
   beforeUnmount() {
-    console.log("beforeDestroy");
+    console.log('beforeDestroy');
+    // dispose echarts instance
+
     this.$refs.chart.dispose();
+    this.$refs.chart.value = null;
   },
 });
 </script>
