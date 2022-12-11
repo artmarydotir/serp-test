@@ -13,8 +13,8 @@
               <div>
                 <label class="label text-grey-darken-2" for="name">Name</label>
                 <VTextField
-                  :rules="[ruleRequired]"
                   v-model="name"
+                  :rules="[ruleRequired]"
                   prepend-inner-icon="fluent:person-24-regular"
                   id="name"
                   name="name"
@@ -89,11 +89,13 @@
 </template>
 
 <script setup>
-const name = ref("");
-const email = ref("");
-const password = ref("");
+const name = ref('');
+const email = ref('');
+const password = ref('');
 
 const { ruleEmail, rulePassLen, ruleRequired } = useFormRules();
 
-const submit = async () => {};
+const submit = async () => {
+  console.log(name.value, email.value, password.value);
+};
 </script>

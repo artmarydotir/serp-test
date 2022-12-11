@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {
+      "id": "sim_view_node/f64c6331cc60badad63010a676b6652de71869fa",
+      "term": "سئو این گوک",
+      "volume": 70,
+      "clusterTag": "e7f6c2b38e"
+    },
+    {
+      "id": "sim_view_node/4c57fdeab81d6baf948e36a77bf5e639faee8720",
+      "term": "بیوگرافی سئو این گوک",
+      "volume": 20,
+      "clusterTag": "e7f6c2b38e"
+    },
+    {
+      "id": "sim_view_node/023547420b45c33c2c13acdfa9d875d8c4e84f98",
+      "term": "سئو این گوک نمایشهای تلویزیونی",
+      "volume": 0,
+      "clusterTag": "e7f6c2b38e"
+    },
+    {
+      "id": "sim_view_node/dd15413b8958f9e7515c5c55c1a7e8eee14e7d5e",
+      "term": "سئو اين گوك",
+      "volume": 0,
+      "clusterTag": "e7f6c2b38e"
+    },
+    {
+      "id": "sim_view_node/328f25d93814b396b20f826c08eccc2ded5e73e1",
+      "term": "سئو این گوگ",
+      "volume": 0,
+      "clusterTag": "e7f6c2b38e"
+    },
+    {
+      "id": "sim_view_node/e5eefe7cced5a4f48cf2af609c6e1fc690446c71",
+      "term": "سئو این گوک بیوگرافی",
+      "volume": 0,
+      "clusterTag": "e7f6c2b38e"
+    },
+    {
+      "id": "sim_view_node/4e6599c9a5a5152b51ca19a730a6db2ae5e648d6",
+      "term": "سریال های سئو این گوک",
+      "volume": 0,
+      "clusterTag": "e7f6c2b38e"
+    },
+    {
+      "id": "sim_view_node/2c66139db47a212a60d7cf90c26799b9619faf2a",
+      "term": "سریالهای سئو این گوک",
+      "volume": 0,
+      "clusterTag": "e7f6c2b38e"
+    },
+    {
+      "id": "sim_view_node/2cceb91e2b4a33080e7b164e7be2b1cbcc508880",
+      "term": "عکسهای سئو این گوک",
+      "volume": 0,
+      "clusterTag": "e7f6c2b38e"
+    },
+    {
+      "id": "sim_view_node/8e7e7b46fdc7bcf9a1d381b806fdc6c35833daf3",
+      "term": "فیلمهای سئو این گوک",
+      "volume": 0,
+      "clusterTag": "e7f6c2b38e"
+    }
+  ]
+}
