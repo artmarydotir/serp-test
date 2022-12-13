@@ -7,6 +7,7 @@
         :option="option"
         :autoresize="true"
         :loading="loading"
+        @click="handleClick"
       />
     </client-only>
   </div>
@@ -14,7 +15,7 @@
 
 <script>
 import { use } from 'echarts/core';
-import { CanvasRenderer, SVGRenderer } from 'echarts/renderers';
+import { SVGRenderer } from 'echarts/renderers';
 import { PieChart, BarChart, LineChart, GraphChart } from 'echarts/charts';
 
 import {
@@ -60,6 +61,7 @@ export default defineComponent({
       default: false,
     },
   },
+
   //   setup() {
   //     const option = ref({
   //       title: {
@@ -101,6 +103,16 @@ export default defineComponent({
 
   //     return { option };
   //   },
+  methods: {
+    handleClick(params) {
+      // console.log('click', params);
+      // console.log('click', params.data);
+      // // window.open(
+      // //   'https://www.google.com/search?q=' + encodeURIComponent(params.name),
+      // // );
+      this.$emit('click', params);
+    },
+  },
 
   beforeUnmount() {
     console.log('beforeDestroy');

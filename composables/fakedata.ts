@@ -43,10 +43,6 @@ export function useFakeData(nodeNumber: number, linkNumber: number): any {
     };
   });
 
-  console.log('nodes', nodes);
-  console.log('links', links);
-  console.log('categories', cat);
-
   return {
     nodes,
     links,

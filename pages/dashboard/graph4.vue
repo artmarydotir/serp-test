@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="612">
         <v-card height="800">
-          <Chart :option="graphOption1" :loading="loading" />
+          <Chart :option="graphOption1" :loading="loading" @click="getData" />
         </v-card>
         {{ tax }}
       </v-col>
@@ -18,7 +18,6 @@ const node = ref(10);
 const link = ref(2);
 const check = ref(true);
 const loading = ref(true);
-const tax = ref(false);
 
 const graphOption1 = reactive({
   title: {
@@ -82,4 +81,10 @@ onMounted(async () => {
   graphOption1.series[0].categories = cat;
   loading.value = false;
 });
+
+function getData(params) {
+  console.log('im parents', params);
+
+  // tax.value = params.data;
+}
 </script>
