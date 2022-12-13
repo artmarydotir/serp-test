@@ -30,6 +30,26 @@
           Graph 2
         </NuxtLink>
       </v-btn>
+      |
+      <v-btn variant="text">
+        <NuxtLink
+          exact
+          to="/dashboard/graph3"
+          class="font-weight-bold text-white text-decoration-none inline-block"
+        >
+          Real 1
+        </NuxtLink>
+      </v-btn>
+      |
+      <v-btn variant="text">
+        <NuxtLink
+          exact
+          to="/dashboard/graph4"
+          class="font-weight-bold text-white text-decoration-none inline-block"
+        >
+          Real 2
+        </NuxtLink>
+      </v-btn>
       <v-spacer></v-spacer>
       <v-btn @click="toggleTheme">toggle theme</v-btn>
     </v-container>

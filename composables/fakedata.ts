@@ -20,13 +20,13 @@ export function useFakeData(nodeNumber: number, linkNumber: number): any {
 
   for (let i = 0; i < nodeNumber; i++) {
     nodes.push({
-      id: i,
+      id: `node${i}`,
       name: 'nodeName' + i,
       symbolSize: Math.floor(Math.random() * 48) + 2,
       x: Math.floor(Math.random() * 100),
       y: Math.floor(Math.random() * 100),
-      value: Math.floor(Math.random() * 1000),
-      category: Math.floor(Math.random() * 9) + 1,
+      // value: Math.floor(Math.random() * 1000),
+      category: categories[Math.floor(Math.random() * categories.length)],
     });
   }
 
@@ -42,6 +42,10 @@ export function useFakeData(nodeNumber: number, linkNumber: number): any {
       name: i,
     };
   });
+
+  console.log('nodes', nodes);
+  console.log('links', links);
+  console.log('categories', cat);
 
   return {
     nodes,
