@@ -5,6 +5,7 @@
         <v-row no-gutters align="center" justify="center">
           <v-col cols="12" md="6">
             <h1>Sign In</h1>
+            <Hello />
             <p class="text-medium-emphasis">
               Enter your details to get started
             </p>
@@ -81,8 +82,11 @@
   </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
+// import { ComputedRef, ref, computed } from 'vue';
+
 const email = ref('');
+
 const password = ref('');
 const { ruleEmail, rulePassLen, ruleRequired } = useFormRules();
 const submit = async () => {

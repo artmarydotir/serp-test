@@ -1,4 +1,10 @@
 {
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strict": true,
+    "sourceMap": true,
+    "target": "es2017"
+  },
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json"
 }
